@@ -3,12 +3,17 @@ import React, { useState } from 'react';
 const Contador = () => {
   const [numero, setNumero] = useState(0);
 
-//   imcremento del numero
+  // Incrementar en 1
   const incrementar = () => {
     setNumero(numero + 1);
   };
 
-// restablecemos el numero
+  // Incrementar en 2
+  const incrementarMasDos = () => {
+    setNumero(numero + 2);
+  };
+
+  // Restablecer a 0
   const restablecer = () => {
     setNumero(0);
   };
@@ -25,6 +30,12 @@ const Contador = () => {
           Incrementar
         </button>
         <button
+          onClick={incrementarMasDos}
+          className="px-4 py-2 bg-blue-500 text-white font-medium rounded hover:bg-blue-600"
+        >
+          Incrementar +2
+        </button>
+        <button
           onClick={restablecer}
           className="px-4 py-2 bg-red-500 text-white font-medium rounded hover:bg-red-600"
         >
@@ -35,4 +46,4 @@ const Contador = () => {
   );
 };
 
-export default Contador;
+export default Contador;
